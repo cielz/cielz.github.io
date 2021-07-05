@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+Common Runtime-Engineering Exchange Model (CREEM)
+Copyright © 2021 Siemens AG. Advanta. All rights reserved.
+
+ * Siemens AG. MIT License 1.0
+ *
+ * Permission is hereby granted, free of charge, to any person
+ * obtaining a copy of this software and associated documentation
+ * files (the "Software"), to deal in the Software without
+ * restriction, including without limitation the rights to use,
+ * copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the
+ * Software is furnished to do so, subject to the following
+ * conditions:
+ * 
+ * The above copyright notice and this permission notice shall be
+ * included in all copies or substantial portions of the Software.
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+ * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+ * OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+ * NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+ * HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+ * WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+ * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+ * OTHER DEALINGS IN THE SOFTWARE.
+
+CoreNamespace: CREEM.FB.Definition
+Contact: zhenhua.zhou@siemens.com
+
+    xsi:schemaLocation="http://creem.siemens.com/schemas/creem/fb" 
+    xsi:noNamespaceSchemaLocation="..\Schemas\CREEM_FunctionBlock.xsd"
+-->
+
+<cm:CIMI xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+         xmlns:bs="http://creem.siemens.com/schemas/base" 
+         xmlns:cim="http://creem.siemens.com/schemas/cim" 
+         xmlns:cm="http://creem.siemens.com/schemas/creem"
+         xmlns="http://creem.siemens.com/schemas/creem"
+         state="Alpha" version="0.0.1" lang="en-US">
+    
+    <cm:FunctionBlock id="Siemens.RoboticInstruction.Robotic.MoveCircular">
+        <cm:Metadata>
+            <cm:Namespace>CREEM.FB.{id}</cm:Namespace>
+            <cm:NamespaceURI/>
+            <cm:Name>MoveCircular</cm:Name>
+            <cm:Version>1.0.1</cm:Version>
+            <cm:Description/>
+            <cm:UUID>a95ba99e-ee62-4031-9bdd-b0c13bb08f62</cm:UUID>
+            <cm:Certification>
+                <cm:OrganizationName>Siemens AG.</cm:OrganizationName>
+                <cm:DigitalSignature>4da511737012bb873752306ecb672dd962deace3</cm:DigitalSignature>
+            </cm:Certification>
+            <cm:Organization>
+                <cm:OrganizationName>Siemens AG.</cm:OrganizationName>
+                <cm:DigitalSignature>0d94bbe1e7011545d1d094fa419af8e8ff93d123</cm:DigitalSignature>
+            </cm:Organization>
+        </cm:Metadata>
+        
+        <cm:UIInformation>
+            <!-- ISO639_ISO3166 -->
+            <cm:Content lang="en_US">
+                <DisplayName>Move Circular</DisplayName>
+                <Description>Move robotic arm from one point to another circular</Description>
+                <Icon ref="Resource.defaultIcon"/>
+                <Diagram location="{id}.json"/>
+                <Dialog location="index.html"/>
+            </cm:Content>
+            <cm:Content lang="zh_CN">
+                <DisplayName>圆弧移动</DisplayName>
+                <Description>将机械臂按照圆弧路径从一点移动至另一点</Description>
+                <cm:Input>
+                    <cm:Port id="trajectory" displayName="轨迹">
+                        <cm:Parameter id="point" displayName="点">
+                            <cm:Parameter id="acceleration" displayName="加速度"/>
+                            <cm:Parameter id="velocity" displayName="速度"/>
+                            <cm:Parameter id="duration" displayName="持续时间"/>
+                            <cm:Parameter id="blending" displayName="融合"/>
+                            <cm:Parameter id="space" displayName="坐标"/>
+                            <cm:Parameter id="tool" displayName="工件坐标"/>
+                            <cm:Parameter id="selected" displayName="选择"/>
+                        </Parameter>
+                    </cm:Port>
+                    <cm:Port id="reference" displayName="引用"/>
+                </cm:Input>
+                <cm:Output>
+                    <cm:Port id="status" displayName="状态码"/>
+                </cm:Output>
+            </cm:Content>
+        </cm:UIInformation>
+
+        <cm:Data>
+            <cm:Content>
+                <cm:Executor location="{id}.py"/>
+                <cm:Category type="LogicalNode"/>
+                <cm:PhysicalNode type="Robotic">
+                    <cm:DeviceDescription ref="Robotic.UniversalRobots.UR5"/>
+                    <cm:DeviceDescription ref="Robotic.UniversalRobots.UR5E"/>
+                    <cm:DeviceDescription ref="Robotic.KUKA.*"/>
+                </cm:PhysicalNode>
+                <!-- <cm:PhysicalNode>CREEM.DD.Robotic.UniversalRobots.UR5.1</cm:PhysicalNode> -->
+
+                <cm:Input>
+                    <cm:Port id="trajectory" type="Array" minCount="0" maxCount="unlimited">
+                        <cm:Parameter id="point" type="Struct">
+                            <cm:Parameter id="x" type="UNECE" unit="mm" defaultValue="0"/>
+                            <cm:Parameter id="y" type="UNECE" unit="mm" defaultValue="0"/>
+                            <cm:Parameter id="z" type="UNECE" unit="mm" defaultValue="0"/>
+                            <cm:Parameter id="rx" type="UNECE" unit="rad" defaultValue="0"/>
+                            <cm:Parameter id="ry" type="UNECE" unit="rad" defaultValue="0"/>
+                            <cm:Parameter id="rz" type="UNECE" unit="rad" defaultValue="0"/>
+                            <cm:Parameter id="acceleration" type="UNECE" unit="mm/s²" defaultValue="1200"/>
+                            <cm:Parameter id="velocity" type="UNECE" unit="mm/s" defaultValue="250"/>
+                            <cm:Parameter id="duration" type="UNECE" unit="s" defaultValue="25"/>
+                            <cm:Parameter id="blending" type="UNECE" unit="mm" defaultValue="36"/>
+                            <cm:Parameter id="space" type="Enum" defaultValue="Base"/>
+                            <cm:Parameter id="tool" type="String" defaultValue="Tool0"/>
+                            <cm:Parameter id="selected" type="Bool" defaultValue="true"/>
+                        </Parameter>
+                    </cm:Port>
+                    <cm:Port id="reference" type="Ref"/>
+                </cm:Input>
+                <cm:Output>
+                    <cm:Port id="status" type="StatusCode"/>
+                </cm:Output>
+
+            </cm:Content>
+        </cm:Data>
+
+        <cm:Resource>
+            <cm:Content id="defaultIcon" type="Icon" format="SVG">
+                <![CDATA[
+                <svg height="512" viewBox="0 0 512 512" width="512" xmlns="http://www.w3.org/2000/svg"><g id="Outline"><path d="m488 416h-8v-376a8 8 0 0 0 -8-8h-432a8 8 0 0 0 -8 8v376h-8a8 8 0 0 0 -8 8v32a8 8 0 0 0 8 8h24v24a8 8 0 0 0 8 8h48a8 8 0 0 0 8-8v-24h112v24a8 8 0 0 0 8 8h48a8 8 0 0 0 8-8v-24h112v24a8 8 0 0 0 8 8h48a8 8 0 0 0 8-8v-24h24a8 8 0 0 0 8-8v-32a8 8 0 0 0 -8-8zm-152 0v-112h32v40a8 8 0 0 0 8 8h48a8 8 0 0 0 8-8v-40h32v112zm-240-112h32v32h-32zm-48-16v-112h32v40a8 8 0 0 0 8 8h48a8 8 0 0 0 8-8v-40h32v112zm48-112h32v32h-32zm96 0h32v40a8 8 0 0 0 8 8h48a8 8 0 0 0 8-8v-40h32v112h-128zm48-128h32v32h-32zm-8 48h48a8 8 0 0 0 8-8v-40h32v112h-128v-112h32v40a8 8 0 0 0 8 8zm8 80h32v32h-32zm144 0h32v32h-32zm-8 48h48a8 8 0 0 0 8-8v-40h32v112h-128v-112h32v40a8 8 0 0 0 8 8zm8 80h32v32h-32zm-144 0h32v32h-32zm-16 0v40a8 8 0 0 0 8 8h48a8 8 0 0 0 8-8v-40h32v112h-128v-112zm240-144h-128v-112h32v40a8 8 0 0 0 8 8h48a8 8 0 0 0 8-8v-40h32zm-80-112h32v32h-32zm-288 0h32v32h-32zm-16 0v40a8 8 0 0 0 8 8h48a8 8 0 0 0 8-8v-40h32v112h-128v-112zm-32 256h32v40a8 8 0 0 0 8 8h48a8 8 0 0 0 8-8v-40h32v112h-128zm48 176h-32v-16h32zm176 0h-32v-16h32zm176 0h-32v-16h32zm32-32h-448v-16h448z"/><path d="m432 384h16v16h-16z"/><path d="m288 384h16v16h-16z"/><path d="m432 256h16v16h-16z"/><path d="m288 256h16v16h-16z"/><path d="m144 384h16v16h-16z"/><path d="m144 256h16v16h-16z"/><path d="m432 128h16v16h-16z"/><path d="m288 128h16v16h-16z"/><path d="m144 128h16v16h-16z"/></g></svg>
+                ]]>
+            </cm:Content>
+        </cm:Resource>
+
+    </cm:FunctionBlock>
+
+</cm:CIMI>
