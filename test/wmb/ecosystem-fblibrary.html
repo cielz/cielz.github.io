@@ -207,13 +207,14 @@
                 </div>
 
                 <div class="app-main__outer">
-                    <div class="app-main__inner">
+                    <div class="app-main__inner" style="font-family: Roboto-Condensed;">
                         <div class="tab-content">     
                         <div class="tab-pane tabs-animation fade show active" id="tab-content-0" role="tabpanel">
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="mb-3 card text-white card-body bg-danger">
-                                        <h5 class="text-white card-title">Work in Progress</h5>Function Block Library
+                                        <h5 class="text-white card-title">Work in Progress</h5>
+                                        Customized Function Blocks
                                     </div>
                                 </div>
                             </div>
@@ -221,31 +222,40 @@
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="main-card mb-3 card">
-                                        <div class="card-header" style="text-transform:capitalize"><div class="badge badge-info">FB</div>&nbsp;Keyence.BarcodeSkill.ScanBarcode</div>
-                                        <br><div class="text-center"><img width="70%" src="img/fb/scan_barcode.png"></div>
+                                        <div class="card-header" style="text-transform:capitalize">
+                                            <div class="badge badge-warning">FB</div>&nbsp;ScrewFastening
+                                            <div class="btn-actions-pane-right">
+                                                <div role="group" class="btn-group-sm nav btn-group">
+                                                    <a data-toggle="tab" href="#tab-fb0-0" class="btn-shadow active btn btn-info">Default</a>
+                                                    <a data-toggle="tab" href="#tab-fb0-1" class="btn-shadow  btn btn-success">中文</a>
+                                                </div>
+                                            </div>
+                                        </div>
+
                                         <div class="card-body">
-                                            <pre><code class="language-bash">
-    ###### CONFIG
-    ACCEPTED_HOSTS="/root/.hag_accepted.conf"
-    BE_VERBOSE=false
-
-    if [ "$UID" -ne 0 ]
-    then
-     echo "Superuser rights required"
-     exit 2
-    fi
-
-    genApacheConf(){
-     echo -e "# Host ${HOME_DIR}$1/$2 :"
-    }
-
-    echo '"quoted"' | tr -d \" > text.txt
-                                            </code></pre>
+                                            <div class="tab-content">
+                                                <div class="tab-pane active" id="tab-fb0-0" role="tabpanel">
+                                                    <div class="text-center"><img width="75%" src="img/fb/scan_barcode.png"><br><br></div>
+                                                </div>
+                                                <div class="tab-pane" id="tab-fb0-1" role="tabpanel">
+                                                    <div class="text-center"><img width="75%" src="img/fb/scan_barcode-cn.png"><br><br></div>
+                                                </div>
+                                            </div>
+                                            <ul class="list-group">
+                                                <li class="list-group-item-secondary list-group-item">
+                                                    <b>FB Namespace</b><br>
+                                                    Atlas.TorqueWrenchSkill.ScrewFastening
+                                                </li>
+                                                <li class="list-group-item-secondary list-group-item">
+                                                    <b>DevDesc Namespace</b><br>
+                                                    TorqueWrench.Atlas.
+                                                </li>
+                                            </ul>
                                         </div>
                                         <div class="card-footer">
-                                            <button type="button" data-toggle="collapse" href="#collapseTarget" class="btn btn-dark">Copy the URL</button>&nbsp;
-                                            <button type="button" data-toggle="collapse" href="#collapseTarget" class="btn btn-outline-primary">CREEM</button>&nbsp;
-                                            <button type="button" data-toggle="collapse" href="#collapseTarget" class="btn btn-outline-primary">Source</button>
+                                            <a href="fb/Atlas.TorqueWrenchSkill.ScrewFastening.html" target="_blank"><button type="button" data-toggle="collapse" href="#collapseTarget" class="btn btn-dark">Copy the URL</button></a>&nbsp;
+                                            <a href="fb/Atlas.TorqueWrenchSkill.ScrewFastening.xml" target="_blank"><button type="button" data-toggle="collapse" href="#collapseTarget" class="btn btn-outline-primary">CREEM</button></a>&nbsp;
+                                            <a href="fb/Atlas.TorqueWrenchSkill.ScrewFastening.html" target="_blank"><button type="button" data-toggle="collapse" href="#collapseTarget" class="btn btn-outline-primary">Source</button></a>
                                         </div>
                                     </div>
                                 </div>
@@ -253,7 +263,7 @@
                                 <div class="col-md-4">
                                     <div class="main-card mb-3 card">
                                         <div class="card-header" style="text-transform:capitalize">
-                                            <div class="badge badge-warning">FB</div>&nbsp;ScrewFastening
+                                            <div class="badge badge-warning">FB</div>&nbsp;ScanBarcode
                                             <div class="btn-actions-pane-right">
                                                 <div role="group" class="btn-group-sm nav btn-group">
                                                     <a data-toggle="tab" href="#tab-fb1-0" class="btn-shadow active btn btn-info">Default</a>
@@ -271,11 +281,21 @@
                                                     <div class="text-center"><img width="75%" src="img/fb/scan_barcode-cn.png"><br><br></div>
                                                 </div>
                                             </div>
+                                            <ul class="list-group">
+                                                <li class="list-group-item-secondary list-group-item">
+                                                    <b>FB Namespace</b><br>
+                                                    Keyence.BarcodeSkill.ScanBarcode
+                                                </li>
+                                                <li class="list-group-item-secondary list-group-item">
+                                                    <b>DevDesc Namespace</b><br>
+                                                    BarcodeScanner.Keyence.
+                                                </li>
+                                            </ul>
                                         </div>
                                         <div class="card-footer">
-                                            <button type="button" data-toggle="collapse" href="#collapseTarget" class="btn btn-dark">Copy the URL</button>&nbsp;
-                                            <button type="button" data-toggle="collapse" href="#collapseTarget" class="btn btn-outline-primary">CREEM</button>&nbsp;
-                                            <button type="button" data-toggle="collapse" href="#collapseTarget" class="btn btn-outline-primary">Source</button>
+                                            <a href="fb/Keyence.BarcodeSkill.ScanBarcode.Import.json" target="_blank"><button type="button" data-toggle="collapse" href="#collapseTarget" class="btn btn-dark">Package</button></a>&nbsp;
+                                            <a href="fb/Keyence.BarcodeSkill.ScanBarcode.xml" target="_blank"><button type="button" data-toggle="collapse" href="#collapseTarget" class="btn btn-outline-primary">CREEM</button></a>&nbsp;
+                                            <a href="fb/Keyence.BarcodeSkill.ScanBarcode.html" target="_blank"><button type="button" data-toggle="collapse" href="#collapseTarget" class="btn btn-outline-primary">Source</button></a>
                                         </div>
                                     </div>
                                 </div>
