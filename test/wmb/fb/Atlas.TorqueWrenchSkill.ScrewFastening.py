@@ -1,4 +1,3 @@
-
 import ast
 import csv
 import json
@@ -15,7 +14,6 @@ TIME_OUT_ATLAS = 50
 RETRY_COUNTER = 5
 IP_DEFAULT = "192.168.1.98"
 PORT_DEFAULT = 4545
-
 
 # atlas application message ID
 MID0001_COMM_START      = '00200001003000000000'  # Application Communication start
@@ -49,12 +47,15 @@ TIME_STAMP_START   = 197
 TIME_STAMP_END     = 216
 PSET_DICT_DEFAULT = '{"Pset":"002"}'
 
+#TODO IP, Port shall be refactored to read from _device
+#Input Port: pset
+def SPIDR_FB_Main(IP, Port, pset):
 
-
-def SPIDR_FB_Main(IP, Port, pset_dict=PSET_DICT_DEFAULT):
-
+    #TODO This part shall be refactored to SPIDR implementation
     ip_socket = IP
     port_socket = int(Port)
+
+    pset_dict["Pset"] = pset
 
     client = AtlasClient(ip_socket, port_socket)
     client.start_comm()
@@ -74,7 +75,10 @@ def SPIDR_FB_Main(IP, Port, pset_dict=PSET_DICT_DEFAULT):
 
     client.stop_comm()
 
-    #return (json_Pset)
+    status = 0x00000000
+
+    #Output Port: status
+    return (status)
 
 def check_log_file():
     print("- check log file existed or setup a new csv file")
@@ -267,44 +271,6 @@ class AtlasClient(object):
         self.sk = None
 
 
+#TODO This part shall be refactored to SPIDR implementation
 if __name__ == "__main__":
     SPIDR_FB_Main(IP_DEFAULT, PORT_DEFAULT)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                
-
-
-
-
-
-
-
-
-
-
-
-
