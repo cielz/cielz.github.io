@@ -31,7 +31,7 @@
             {
                 "type": "Device",
                 "name": "AGV",
-                "definitionBase64": ""
+                "definitionBase64": "",
                 "UI": {
                     "base64": "",
                     "iframe": {

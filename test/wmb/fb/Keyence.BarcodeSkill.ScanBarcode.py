@@ -1,4 +1,3 @@
-
 import csv
 import json
 import socket
@@ -22,7 +21,7 @@ CSV_BARCODE_NAME = "Barcode"
 CSV_PSET_NAME = "Pset"
 PSET_LENGTH = 3
 
-def SPIDR_FB_Main(IP, Port):
+def SPIDR_FB_Main(IP, Port, pset):
     ip_socket = IP
     port_socket = int(Port)
 
@@ -35,7 +34,8 @@ def SPIDR_FB_Main(IP, Port):
 
     client.close_module()
     
-    return (json_Pset)
+    status = 0x00000000
+    return (barcode, status)
 
 
 def data_compare(barcode):
