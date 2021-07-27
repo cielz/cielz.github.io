@@ -55,6 +55,13 @@ CoreNamespace: CREEM.Import.Template
 			<cm:Content lang="zh-CN">
 				<cm:DisplayName>扫描条码</cm:DisplayName>
 				<cm:Description>用基恩士条码扫描器扫条码</cm:Description>
+				<cm:Input>
+					<cm:Port id="pset" displayName="参数集"/>
+				</cm:Input>
+				<cm:Output>
+					<cm:Port id="barcode" displayName="条形码"/>
+					<cm:Port id="status" displayName="状态码"/>
+				</cm:Output>
 			</cm:Content>
 		</cm:UIInformation>
 		<cm:Data>
