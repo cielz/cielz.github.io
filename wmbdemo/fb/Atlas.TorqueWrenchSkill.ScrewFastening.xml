@@ -67,6 +67,7 @@ Copyright © 2021 Siemens AG. Advanta. All rights reserved.
 				<cm:Category type="LogicalNode"/>
 				<cm:PhysicalNode type="Device">
 					<cm:DeviceDescription ref="TorqueWrench.Atlas.PF4000"/>
+					<cm:DeviceDescription ref="TorqueWrench.Atlas.PF6000"/>
 				</cm:PhysicalNode>
 				<cm:Input>
 					<cm:Port id="pset" type="String" defaultValue="002"/>
