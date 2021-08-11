@@ -9,10 +9,11 @@
 <meta name="msapplication-tap-highlight" content="no">
 <link href="./main.css" rel="stylesheet">
 
-<div class="app-container app-theme-white body-tabs-shadow fixed-header">
-    <div class="app-header header-shadow" style="background-color: #BBE7E7">
+<div class="app-container app-theme-white body-tabs-shadow">
+    <div class="app-header header-shadow">
         <div class="app-header__logo">
-            <div class="logo-src"></div>
+            <div class="logo-src"></div>&nbsp;&nbsp;
+            <i class="fa fa-compass fa-w-16 fa-spin fa-2x"></i>
         </div>
         <div class="app-header__menu">
         </div>    
@@ -20,6 +21,7 @@
             <div class="app-header-left">
             </div>
             <div class="app-header-right">
+                <i class="fa fa-adjust fa-w-16 fa-spin fa-2x"></i>
             </div>
         </div>
     </div>
@@ -46,12 +48,12 @@
                                         </span>
                                         启动
                                     </button>&nbsp;
-                                    <button class="btn btn-warning">
+                                    <!-- <button class="btn btn-warning">
                                         <span class="btn-icon-wrapper pr-2">
                                             <i class="fa fa-pause fa-w-20"></i>
                                         </span>
                                         暂停
-                                    </button>&nbsp;
+                                    </button>&nbsp; -->
                                     <button class="btn btn-danger">
                                         <span class="btn-icon-wrapper pr-2">
                                             <i class="fa fa-stop fa-w-20"></i>
@@ -122,13 +124,13 @@
                             <div class="main-card mb-3 card bg-light">
                                 <div class="card-header" style="background-color: #BBE7E7">查错重启按钮</div>
                                 <div class="card-body">
-                                    <p class="text-center"><button class="btn btn-danger">
+                                    <p class="text-center"><button class="btn btn-warning">
                                         <span class="btn-icon-wrapper pr-2">
                                             <i class="fa fa-arrow-circle-left fa-w-20"></i>
                                         </span>
                                         重启消息服务
                                     </button><br>
-                                    <p class="text-center"><button class="btn btn-danger">
+                                    <p class="text-center"><button class="btn btn-warning">
                                         <span class="btn-icon-wrapper pr-2">
                                             <i class="fa fa-arrow-circle-left fa-w-20"></i>
                                         </span>
@@ -145,6 +147,7 @@
                                 <a data-toggle="modal" data-target="#dataModal">
                                     <div class="text-center"><img width="90%" src="assets/images/data-layer.png"></div>
                                 </a>
+                                <div class="card-footer">Data Layer is an additional service</div>  
                             </div>
                         </div>
                         <div class="col-md-4">
@@ -152,6 +155,7 @@
                                 <a data-toggle="modal" data-target="#manualModal">
                                     <div class="text-center"><img width="90%" src="assets/images/manual.png"></div>
                                 </a>
+                                <div class="card-footer">User manual and help of the dashboard</div>
                             </div>
                         </div>
                         <div class="col-md-4">
@@ -159,6 +163,7 @@
                                 <a data-toggle="modal" data-target="#contactModal">
                                     <div class="text-center"><img width="90%" src="assets/images/contact-us.png"></div>
                                 </a>
+                                <div class="card-footer">Copyright® Siemens AG. Advanta</div>
                             </div>
                         </div>
                     </div>
