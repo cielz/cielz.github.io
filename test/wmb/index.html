@@ -208,14 +208,34 @@
                                 <div class="card-header">Introduction</div>
                                 
                                 <div class="card-body"><img width="60%" src="assets/images/logo.png"><br><br>
-                                WMB (Workcell Microservices Builder) is an innovative project that provides a modern loose-coupled and high-robustness solution that optimized for IoT domain and devices. It consists of a OT low-code platform (WMB), a microservice builder, an information model (CREEM) and a light-weighted runtime (SPIDR).<br><br>
-                                The intuitive engineering paradigm of the WMB OT Low-code is FBTD (Funtion Block Typed Diagram) sourced from an improved and simplified version of IEC61499 based on CREEM that is compatible with Behavior Tree and OPC UA information model.
-                                    <div class="collapse" id="collapseNotice"><br><p>Contents of the website include "System and software architectures", "Low-code paragidm designs", "Showcase and demos" and "FB libraries". It's targeting internal stakeholders, developers, testers, reviewers and other relevant colleagues.</p>
-                                    <p class="text-danger">All elements in the website can only be viewed and shared in Siemens T & ADV internally. Please do NOT expose any elements with external customers or BU without being approved by management.</p></div>
+                                WMB (Workcell Microservices Builder) is an innovative project that provides a modern loose-coupled and high-robustness solution that optimized for IoT domain and devices. It consists of a OT low-code platform (WMB), a microservices builder, an information model (CREEM) and a light-weighted runtime (SPIDR).<br><br>
+                                The intuitive engineering paradigm of the WMB OT Low-code is FBTD (Function Block Typed Diagram) sourced from an improved and simplified version of IEC61499 based on CREEM that is compatible with Behavior Tree and OPC UA information model.
+                                    <div class="collapse" id="collapseNotice"><br>
+                                        <ul>
+                                            <li>Basic features are ready and can run Danfoss workflow as a sample
+                                            <ul>
+                                                <li>Low-code programming as a IOT engineering tool.
+                                                <li>A CIM (CREEM) to support engineering and runtime.
+                                                <li>Ecosystem via the CREEM
+                                                <li>SPIDR can parse the CREEM and run in a IPC or IoT device.
+                                            </ul>
+
+                                            <li>The workflow includes human, machine, PLC, robot, readers and executors
+                                            <li>A simple 3D visualization to preview the cyclic
+                                            <li>WMB can be deployed on shop floor to a real Danfoss sample workstation
+                                        </ul>
+                                        <p>Contents of the website include "System and software architectures", "Low-code paragidm designs", "Showcase and demos" and "FB libraries". It's targeting internal stakeholders, developers, testers, reviewers and other relevant colleagues.</p>
+                                        <p class="text-danger">All elements in the website can only be viewed and shared in Siemens T & ADV internally. Please do NOT expose any elements with external customers or BU without being approved by management.</p>
+                                    </div>
                                 </div>
                                 <div class="card-footer">
                                     <button type="button" data-toggle="collapse" href="#collapseNotice" class="btn btn-dark">Expand More Information</button>
                                 </div>
+                            </div>
+
+                            <div class="main-card mb-3 card">
+                                <div class="card-header">WMB Persona (Draft)</div>
+                                <img src="img/home/persona.png" class="card-img-top">
                             </div>
 
                             <div class="main-card mb-3 card">
@@ -319,21 +339,15 @@
                                 <div class="card-footer">WMB demo is deployed on AWS (Lambda, EC2, S3)</div>
                             </div>
 
-                            <div class="main-card mb-3 card">
-                                <div class="card-body"><h5 class="card-title" style="text-transform:capitalize">WMB Deployment Target</h5>
-                                    <ul class="list-group">
-                                        <li class="list-group-item-success list-group-item">IPC / SBC On-Promise (Major) : Microservices</li>
-                                        <li class="list-group-item-info list-group-item">IaaS Serverless : e.g. AWS</li>
-                                        <li class="list-group-item-warning list-group-item">Electron : Windows / MacOS / Linux</li>
-                                        <li class="list-group-item-danger list-group-item">PWA : Windows Store / Mac Store / iOS / Android</li>
-                                    </ul>
-                                </div>
-                            </div>
-
                             <div class="main-card mb-3 card text-white bg-warning">
                                 <div class="card-header">WMB Family</div>
                                 <img src="img/wmb/wmb-landing.png" class="card-img-top">
                                 <div class="card-body">Relationship among components in WMB system<br></div>
+                            </div>
+
+                            <div class="main-card mb-3 card text-white bg-dark">
+                                <div class="card-header">WMB 3D Visualization Sample (Screenshot, not done)</div>
+                                <img src="img/home/visual-3d.png" class="card-img-top">
                             </div>
 
                             <div class="main-card mb-3 card text-white bg-dark">
@@ -342,10 +356,21 @@
                                 <div class="card-footer">
                                     <a href="design-showcase.html"><button type="button" class="btn btn-light">View More</button></a>
                                 </div>
-                            </div>                            
+                            </div>
 
                             <div class="main-card mb-3 card">
-                                <div class="card-body"><h5 class="card-title" style="text-transform:capitalize">WMB in the overall strategy</h5>
+                                <div class="card-body"><h5 class="card-title">WMB Deployment Target</h5>
+                                    <ul class="list-group">
+                                        <li class="list-group-item-success list-group-item">IPC / SBC On-Promise (Major) : Microservices</li>
+                                        <li class="list-group-item-info list-group-item">IaaS Serverless : e.g. AWS</li>
+                                        <li class="list-group-item-warning list-group-item">Electron : Windows / MacOS / Linux</li>
+                                        <li class="list-group-item-danger list-group-item">PWA : Windows Store / Mac Store / iOS / Android</li>
+                                    </ul>
+                                </div>
+                            </div>     
+
+                            <div class="main-card mb-3 card">
+                                <div class="card-body"><h5 class="card-title">WMB in the Overall Strategy</h5>
                                 WMB is owned by Siemens Advanta Group. It's part of IT/OT (Information Technology and Operation Technology) Polymerization strategy using Data Layer (DL). It will provide OT monitoring data source for DL. At the same time, enable OT low-code programming for both OT and IT engineers.
                                 </div>
                                 <br><div class="text-center"><img width="70%" src="img/wmb-logo.png"></div><br>
