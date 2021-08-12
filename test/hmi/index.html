@@ -21,7 +21,7 @@
             <div class="app-header-left">
             </div>
             <div class="app-header-right">
-                <i class="fa fa-adjust fa-w-16 fa-spin fa-2x"></i>
+                <img width="50px" src="assets/images/china.png">
             </div>
         </div>
     </div>
@@ -30,7 +30,7 @@
             <div class="app-main__inner">
                 <div class="tab-pane tabs-animation fade show active" id="tab-content-1" role="tabpanel">
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-md-5">
                             <div class="main-card mb-3 card text-white" style="height: 120px; background-color: #00AAAA">
                                 <div class="card-header">西门子艾闻达 Siemens Advanta</div>
                                 <div class="card-body" style="background-color: #009999">
@@ -38,7 +38,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-3">
                             <div class="main-card mb-3 card" style="height: 120px">
                                 <div class="card-header" style="background-color: #BBE7E7">工作单元微服务 - 启停控制</div>
                                 <div class="card-body">
@@ -59,17 +59,40 @@
                                             <i class="fa fa-stop fa-w-20"></i>
                                         </span>
                                         停止
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="main-card mb-3 card bg" style="height: 120px">
+                                <div class="card-header" style="background-color: #BBE7E7">执行引擎 - 启停控制</div>
+                                <div class="card-body">
+                                    <button class="btn btn-success">
+                                        <span class="btn-icon-wrapper pr-2">
+                                            <i class="fa fa-play fa-w-20"></i>
+                                        </span>
+                                        启动
+                                    </button>&nbsp;
+                                    <button class="btn btn-danger">
+                                        <span class="btn-icon-wrapper pr-2">
+                                            <i class="fa fa-stop fa-w-20"></i>
+                                        </span>
+                                        停止
                                     </button>&nbsp;
                                     <button class="btn btn-secondary">
                                         <span class="btn-icon-wrapper pr-2">
                                             <i class="fa fa-adjust fa-w-20"></i>
                                         </span>
                                         刷新
-                                    </button>
+                                    </button>&nbsp;&nbsp; - &nbsp;&nbsp;
+                                    <div class="badge badge-success">已启动</div>
+                                    <!-- <div class="badge badge-danger">已停止</div> -->
                                 </div>
                             </div>
                         </div>
                     </div>
+
 
                     <div class="row">
                         <div class="col-md-4">
@@ -111,38 +134,58 @@
                         </div>
                         <div class="col-md-3">
                             <div class="main-card mb-3 card bg-light">
+                                <div class="card-header" style="background-color: #BBE7E7">工作单元微服务列表</div>
+                                <div class="card-body">
+                                    <ul class="list-group">
+                                        <li class="list-group-item-light list-group-item">
+                                            压缩机人工拧紧及打钉服务
+                                        </li>
+                                        <li class="list-group-item-light list-group-item">
+                                            那智机器人拧紧服务
+                                        </li>
+                                        <li class="list-group-item-light list-group-item">
+                                            配方表自动加工工站服务
+                                        </li>
+                                        <li class="list-group-item-light list-group-item">
+                                            叉车及人工物流服务
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="main-card mb-3 card bg-light">
                                 <div class="card-header" style="background-color: #BBE7E7">人工确认按键</div>
                                 <br><p class="text-center"><a class="function-xm-button" href="#">人工确认按键</a></p><br>
                             </div>
-                            <div class="main-card mb-3 card bg-light">
-                                <div class="card-header" style="background-color: #BBE7E7">功能面板按键</div>
-                                <br><p class="text-center"><a class="function-x-button" href="#">可配功能按键</a></p><br>
-                                <p class="text-center"><a class="function-x-button f2-button" href="#">可配功能按键</a></p><br>
-                                <p class="text-center"><a class="function-x-button f3-button" href="#">可配功能按键</a></p><br>
-                                <p class="text-center"><a class="function-x-button f4-button" href="#">可配功能按键</a></p><br>
-                            </div>
+                            
                             <div class="main-card mb-3 card bg-light">
                                 <div class="card-header" style="background-color: #BBE7E7">查错重启按钮</div>
                                 <div class="card-body">
-                                    <p class="text-center"><button class="btn btn-warning">
-                                        <span class="btn-icon-wrapper pr-2">
-                                            <i class="fa fa-arrow-circle-left fa-w-20"></i>
-                                        </span>
-                                        重启消息服务
-                                    </button><br>
-                                    <p class="text-center"><button class="btn btn-warning">
-                                        <span class="btn-icon-wrapper pr-2">
-                                            <i class="fa fa-arrow-circle-left fa-w-20"></i>
-                                        </span>
-                                        重启内置驱动
-                                    </button>
+                                    <div class="text-center">
+                                        <button class="btn btn-warning">
+                                            <span class="btn-icon-wrapper pr-2">
+                                                <i class="fa fa-arrow-circle-left fa-w-20"></i>
+                                            </span>
+                                            重启消息服务
+                                        </button>&nbsp;&nbsp;
+                                        <div class="badge badge-success">正常</div>
+                                    </div><br>
+                                    <div class="text-center">
+                                        <button class="btn btn-warning">
+                                            <span class="btn-icon-wrapper pr-2">
+                                                <i class="fa fa-arrow-circle-left fa-w-20"></i>
+                                            </span>
+                                            重启内置驱动
+                                        </button>&nbsp;&nbsp;
+                                        <div class="badge badge-danger">停止</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     <div class="row">
-                        <div class="col-md-4">
+                        <div class="col-md-3">
                             <div class="main-card mb-3 card" style="background-color: #BBE7E7">
                                 <a data-toggle="modal" data-target="#dataModal">
                                     <div class="text-center"><img width="90%" src="assets/images/data-layer.png"></div>
@@ -150,7 +193,7 @@
                                 <div class="card-footer">Data Layer is an additional service</div>  
                             </div>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-3">
                             <div class="main-card mb-3 card" style="background-color: #BBE7E7">
                                 <a data-toggle="modal" data-target="#manualModal">
                                     <div class="text-center"><img width="90%" src="assets/images/manual.png"></div>
@@ -158,12 +201,21 @@
                                 <div class="card-footer">User manual and help of the dashboard</div>
                             </div>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-3">
                             <div class="main-card mb-3 card" style="background-color: #BBE7E7">
                                 <a data-toggle="modal" data-target="#contactModal">
                                     <div class="text-center"><img width="90%" src="assets/images/contact-us.png"></div>
                                 </a>
                                 <div class="card-footer">Copyright® Siemens AG. Advanta</div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="main-card mb-3 card bg-light">
+                                <div class="card-header" style="background-color: #BBE7E7">功能面板按键</div>
+                                <br><p class="text-center"><a class="function-x-button" href="#">可配功能按键</a></p><br>
+                                <p class="text-center"><a class="function-x-button f2-button" href="#">可配功能按键</a></p><br>
+                                <p class="text-center"><a class="function-x-button f3-button" href="#">可配功能按键</a></p><br>
+                                <!-- <p class="text-center"><a class="function-x-button f4-button" href="">可配功能按键</a></p><br> -->
                             </div>
                         </div>
                     </div>
