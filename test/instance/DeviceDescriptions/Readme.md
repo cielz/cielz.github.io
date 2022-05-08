@@ -1,1 +1,0 @@
-Device Descriptions from 3rd Party Vendors
