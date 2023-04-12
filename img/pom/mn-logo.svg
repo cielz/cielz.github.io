@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xl="http://www.w3.org/1999/xlink" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="901.0798 2740.3944 710.0803 521.60556" width="710.0803" height="521.60556">
+  <defs>
+    <font-face font-family="Bebas Neue Pro" font-size="120" panose-1="2 11 5 6 2 2 2 12 2 1" units-per-em="1000" underline-position="-50" underline-thickness="60" slope="-100" x-height="503" cap-height="700" ascent="1000.002" descent="-200.0004" font-style="italic" font-weight="400">
+      <font-face-src>
+        <font-face-name name="BebasNeuePro-Italic"/>
+      </font-face-src>
+    </font-face>
+  </defs>
+  <metadata> Produced by OmniGraffle 7.19.2\n2022-06-08 06:05:17 +0000</metadata>
+  <g id="Canvas_1" stroke="none" fill-opacity="1" stroke-dasharray="none" fill="none" stroke-opacity="1">
+    <title>Canvas 1</title>
+    <g id="Canvas_1_Layer_1">
+      <title>Layer 1</title>
+      <g id="Graphic_119">
+        <path d="M 1094.219 3124.9408 L 1306.1347 3125.712 L 1165.5498 2881.4322 L 1129.5698 2943.7514 L 1199.8616 3065.9025 L 1059.5998 3064.943 Z" fill="#ff4040"/>
+      </g>
+      <g id="Graphic_118">
+        <path d="M 1006.91 2872.8645 L 901.0798 3056.4676 L 1182.9293 3055.63 L 1146.675 2993.4643 L 1005.7435 2993.885 L 1076.1679 2872.586 Z" fill="#666"/>
+      </g>
+      <g id="Graphic_117">
+        <path d="M 1269.5333 2924.2275 L 1164.1051 2740.3944 L 1023.0292 2984.385 L 1094.9976 2984.332 L 1165.2758 2862.187 L 1234.9293 2984.2234 Z" fill="#666"/>
+      </g>
+      <g id="Graphic_116">
+        <path d="M 1418.021 2792.6192 L 1206.1053 2791.848 L 1346.6902 3036.1278 L 1382.6702 2973.8086 L 1312.3784 2851.6575 L 1452.6402 2852.617 Z" fill="#ff4040"/>
+      </g>
+      <g id="Graphic_115">
+        <path d="M 1505.33 3044.6955 L 1611.1602 2861.0924 L 1329.3107 2861.93 L 1365.565 2924.0957 L 1506.4965 2923.675 L 1436.0721 3044.974 Z" fill="#ff4040"/>
+      </g>
+      <g id="Graphic_114">
+        <path d="M 1242.7067 2993.3325 L 1348.1349 3177.1656 L 1489.2108 2933.175 L 1417.2424 2933.228 L 1346.9642 3055.373 L 1277.3107 2933.3366 Z" fill="#666"/>
+      </g>
+      <g id="Graphic_121">
+        <text transform="translate(932 3113)" fill="#666">
+          <tspan font-family="Bebas Neue Pro" font-size="120" font-style="italic" font-weight="400" fill="#666" x="0" y="120">META </tspan>
+          <tspan font-family="Bebas Neue Pro" font-size="120" font-style="italic" font-weight="400" fill="#ff403f" y="120">NIKA</tspan>
+        </text>
+      </g>
+    </g>
+  </g>
+</svg>
